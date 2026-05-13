@@ -42,4 +42,4 @@ Cut a release on GitHub with the built APK attached as an asset and the tag set 
 
 ## License
 
-MIT.
+GPL-3.0. See [LICENSE](LICENSE).
