@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_root">
+
+    <include
+        android:id="@+id/topBar"
+        layout="@layout/view_top_bar" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TAP TO SELECT &amp; DELETE"
+        android:textSize="11sp"
+        android:textColor="@color/text_secondary"
+        android:fontFamily="monospace"
+        android:letterSpacing="0.2"
+        android:gravity="center"
+        android:padding="14dp"
+        android:background="@color/bg_card" />
+
+    <ListView
+        android:id="@+id/listManageAccounts"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:nextFocusUp="@id/btnTopBack"
+        android:divider="@color/divider"
+        android:dividerHeight="1dp"
+        android:padding="0dp"
+        android:listSelector="@color/accent_green_dim">
+        <requestFocus />
+    </ListView>
+
+</LinearLayout>

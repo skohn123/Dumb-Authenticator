@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="32dp"
+    android:background="@color/bg_root">
+
+    <View
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@drawable/avatar_bg"
+        android:layout_marginBottom="20dp" />
+
+    <TextView
+        android:id="@+id/tvPinTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ENTER YOUR PIN"
+        android:textSize="14sp"
+        android:textColor="@color/accent_green"
+        android:fontFamily="monospace"
+        android:textStyle="bold"
+        android:letterSpacing="0.2"
+        android:layout_marginBottom="28dp" />
+
+    <EditText
+        android:id="@+id/etPinInput"
+        android:layout_width="240dp"
+        android:layout_height="64dp"
+        android:inputType="numberPassword"
+        android:maxLength="6"
+        android:gravity="center"
+        android:textSize="32sp"
+        android:letterSpacing="0.4"
+        android:layout_marginBottom="28dp"
+        android:imeOptions="actionDone"
+        android:nextFocusDown="@id/btnSubmitPin"
+        style="@style/Widget.DA.EditText">
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/btnSubmitPin"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:text="CONTINUE"
+        android:nextFocusUp="@id/etPinInput"
+        style="@style/Widget.DA.Button.Primary" />
+</LinearLayout>

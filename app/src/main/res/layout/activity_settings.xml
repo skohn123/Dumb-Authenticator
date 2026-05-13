@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_root">
+
+    <include
+        android:id="@+id/topBar"
+        layout="@layout/view_top_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:focusable="false"
+        android:descendantFocusability="afterDescendants">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ACCOUNTS"
+                style="@style/Widget.DA.SectionLabel"
+                android:layout_marginBottom="8dp" />
+
+            <Button
+                android:id="@+id/itemManageAccounts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MANAGE ACCOUNTS"
+                android:layout_marginBottom="20dp"
+                android:nextFocusUp="@id/btnTopBack"
+                android:nextFocusDown="@id/btnExport"
+                style="@style/Widget.DA.Button.Primary">
+                <requestFocus />
+            </Button>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="BACKUPS"
+                style="@style/Widget.DA.SectionLabel"
+                android:layout_marginBottom="8dp" />
+
+            <Button
+                android:id="@+id/btnExport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="EXPORT (ENCRYPTED)"
+                android:layout_marginBottom="8dp"
+                android:nextFocusUp="@id/itemManageAccounts"
+                android:nextFocusDown="@id/btnExportPlain"
+                style="@style/Widget.DA.Button.Secondary" />
+
+            <Button
+                android:id="@+id/btnExportPlain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="EXPORT (PLAINTEXT)"
+                android:layout_marginBottom="8dp"
+                android:nextFocusUp="@id/btnExport"
+                android:nextFocusDown="@id/btnImport"
+                style="@style/Widget.DA.Button.Secondary" />
+
+            <Button
+                android:id="@+id/btnImport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="IMPORT BACKUP"
+                android:layout_marginBottom="20dp"
+                android:nextFocusUp="@id/btnExportPlain"
+                android:nextFocusDown="@id/itemPin"
+                style="@style/Widget.DA.Button.Secondary" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SECURITY"
+                style="@style/Widget.DA.SectionLabel"
+                android:layout_marginBottom="8dp" />
+
+            <Button
+                android:id="@+id/itemPin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MANAGE APP LOCK"
+                android:layout_marginBottom="20dp"
+                android:nextFocusUp="@id/btnImport"
+                android:nextFocusDown="@id/itemAbout"
+                style="@style/Widget.DA.Button.Secondary" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="INFO"
+                style="@style/Widget.DA.SectionLabel"
+                android:layout_marginBottom="8dp" />
+
+            <Button
+                android:id="@+id/itemCheckUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CHECK FOR UPDATES"
+                android:layout_marginBottom="8dp"
+                android:nextFocusUp="@id/itemPin"
+                android:nextFocusDown="@id/itemAbout"
+                style="@style/Widget.DA.Button.Secondary" />
+
+            <Button
+                android:id="@+id/itemAbout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ABOUT"
+                android:layout_marginBottom="12dp"
+                android:nextFocusUp="@id/itemCheckUpdate"
+                style="@style/Widget.DA.Button.Secondary" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

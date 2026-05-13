@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_root">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:background="@drawable/top_bar_bg"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SETUP"
+            style="@style/Widget.DA.TopBar.Title" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:focusable="false"
+        android:descendantFocusability="afterDescendants">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PERMISSIONS"
+                style="@style/Widget.DA.SectionLabel"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Camera access is required to scan QR codes."
+                android:textSize="12sp"
+                android:fontFamily="monospace"
+                android:textColor="@color/text_secondary"
+                android:layout_marginBottom="14dp" />
+
+            <Button
+                android:id="@+id/btnGrantCamera"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="GRANT CAMERA ACCESS"
+                android:layout_marginBottom="32dp"
+                android:nextFocusDown="@id/btnCreatePin"
+                style="@style/Widget.DA.Button.Secondary">
+                <requestFocus />
+            </Button>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="APP LOCK"
+                style="@style/Widget.DA.SectionLabel"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Set a PIN to protect your codes when someone else has your device."
+                android:textSize="12sp"
+                android:fontFamily="monospace"
+                android:textColor="@color/text_secondary"
+                android:layout_marginBottom="14dp" />
+
+            <Button
+                android:id="@+id/btnCreatePin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CONTINUE WITH PIN"
+                android:layout_marginBottom="10dp"
+                android:nextFocusUp="@id/btnGrantCamera"
+                android:nextFocusDown="@id/btnSkipPin"
+                style="@style/Widget.DA.Button.Primary" />
+
+            <Button
+                android:id="@+id/btnSkipPin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="continue without PIN  (not recommended)"
+                android:nextFocusUp="@id/btnCreatePin"
+                style="@style/Widget.DA.Button.Ghost" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

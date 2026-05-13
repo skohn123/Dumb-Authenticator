@@ -1,0 +1,10 @@
+-dontwarn javax.annotation.**
+-dontwarn kotlin.Unit
+-keep enum dev.turingcomplete.kotlinonetimepassword.** { *; }
+-keep class com.google.mlkit.** { *; }
+-keep class com.google.android.gms.internal.mlkit_** { *; }
+-dontwarn com.google.mlkit.**
+-keep class androidx.camera.** { *; }
+-dontwarn androidx.camera.**
+-keep class com.shk.dumbauthenticator.MainActivity { *; }
+-keep class com.shk.dumbauthenticator.App { *; }

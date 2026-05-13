@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/card_bg"
+    android:focusable="true"
+    android:descendantFocusability="blocksDescendants"
+    android:padding="14dp"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:id="@+id/tvAvatar"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:background="@drawable/avatar_bg"
+        android:gravity="center"
+        android:textColor="@color/accent_green"
+        android:textStyle="bold"
+        android:fontFamily="monospace"
+        android:textSize="18sp"
+        android:layout_marginEnd="14dp"
+        android:text="?" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvAccountLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Account Name"
+            android:textSize="13sp"
+            android:textColor="@color/text_secondary"
+            android:fontFamily="monospace"
+            android:ellipsize="end"
+            android:maxLines="1" />
+
+        <TextView
+            android:id="@+id/tvTotpCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="000 000"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@color/accent_green"
+            android:letterSpacing="0.15"
+            android:fontFamily="monospace"
+            android:layout_marginTop="2dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="end|center_vertical">
+
+        <TextView
+            android:id="@+id/tvSecondsRemaining"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/accent_green"
+            android:fontFamily="monospace"
+            android:gravity="end" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="sec"
+            android:textSize="9sp"
+            android:textColor="@color/text_secondary"
+            android:fontFamily="monospace"
+            android:gravity="end" />
+
+        <ProgressBar
+            android:id="@+id/progressBarItem"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:progressDrawable="@drawable/progress_track"
+            android:layout_width="56dp"
+            android:layout_height="3dp"
+            android:max="30"
+            android:progress="30"
+            android:layout_marginTop="4dp" />
+    </LinearLayout>
+
+</LinearLayout>

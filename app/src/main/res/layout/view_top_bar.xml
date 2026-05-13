@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:orientation="horizontal"
+    android:background="@drawable/top_bar_bg"
+    android:gravity="center_vertical"
+    android:paddingStart="4dp"
+    android:paddingEnd="4dp">
+
+    <ImageButton
+        android:id="@+id/btnTopBack"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_back"
+        android:background="@drawable/btn_icon_bg"
+        android:contentDescription="Back"
+        android:focusable="true" />
+
+    <TextView
+        android:id="@+id/topBarTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginStart="8dp"
+        style="@style/Widget.DA.TopBar.Title" />
+</LinearLayout>

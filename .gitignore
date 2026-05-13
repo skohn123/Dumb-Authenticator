@@ -1,0 +1,82 @@
+# Gradle
+.gradle/
+build/
+**/build/
+.gradletasknamecache
+
+# IDE — IntelliJ / Android Studio
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+captures/
+.navigation/
+.kotlin/
+
+# Local config (user-specific)
+local.properties
+
+# Logs
+*.log
+hs_err_*
+replay_*
+
+# Build outputs
+*.apk
+*.ap_
+*.aab
+*.dex
+*.class
+*.zip
+*.tar.gz
+
+# Keys / signing — never check in
+*.jks
+*.keystore
+*.p12
+*.pem
+*.crt
+key.properties
+keystore.properties
+
+# Android NDK
+.cxx/
+
+# Test / coverage / profiling
+test-results/
+build/test-results/
+.junit/
+
+# AGP-generated metadata
+**/release/output-metadata.json
+**/release/baselineProfiles/
+
+# OS — macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# OS — Windows
+Thumbs.db
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# OS — Linux
+.fuse_hidden*
+.directory
+.Trash-*
+
+# Editor leftovers
+*.bak
+*.swp
+*.swo
+*.tmp
+*.orig
+*~
+
+# VS Code
+.vscode/

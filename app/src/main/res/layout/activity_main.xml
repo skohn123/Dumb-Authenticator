@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_root">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:background="@drawable/top_bar_bg"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="4dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="AUTHENTICATOR"
+            style="@style/Widget.DA.TopBar.Title" />
+
+        <ImageButton
+            android:id="@+id/btnInfo"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:src="@drawable/ic_info"
+            android:background="@drawable/btn_icon_bg"
+            android:contentDescription="About"
+            android:focusable="true"
+            android:nextFocusRight="@id/btnSettings"
+            android:nextFocusDown="@id/listViewAccounts" />
+
+        <ImageButton
+            android:id="@+id/btnSettings"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:src="@drawable/ic_settings"
+            android:background="@drawable/btn_icon_bg"
+            android:contentDescription="Settings"
+            android:focusable="true"
+            android:nextFocusLeft="@id/btnInfo"
+            android:nextFocusDown="@id/listViewAccounts" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ListView
+            android:id="@+id/listViewAccounts"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="10dp"
+            android:padding="12dp"
+            android:clipToPadding="false"
+            android:listSelector="@android:color/transparent"
+            android:focusable="true"
+            android:nextFocusUp="@id/btnSettings"
+            android:nextFocusDown="@id/btnScan" />
+
+        <LinearLayout
+            android:id="@+id/emptyState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="[ NO ACCOUNTS LINKED ]"
+                android:textSize="13sp"
+                android:textColor="@color/text_secondary"
+                android:fontFamily="monospace"
+                android:letterSpacing="0.15" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="add one below with SCAN or MANUAL"
+                android:textSize="11sp"
+                android:textColor="@color/text_secondary"
+                android:fontFamily="monospace"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/top_bar_bg"
+        android:padding="12dp">
+
+        <Button
+            android:id="@+id/btnScan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="SCAN"
+            android:drawableStart="@drawable/ic_qr"
+            android:drawablePadding="10dp"
+            android:layout_marginEnd="6dp"
+            android:nextFocusUp="@id/listViewAccounts"
+            android:nextFocusRight="@id/btnManual"
+            style="@style/Widget.DA.Button.Primary">
+            <requestFocus />
+        </Button>
+
+        <Button
+            android:id="@+id/btnManual"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="MANUAL"
+            android:layout_marginStart="6dp"
+            android:nextFocusUp="@id/listViewAccounts"
+            android:nextFocusLeft="@id/btnScan"
+            style="@style/Widget.DA.Button.Secondary" />
+    </LinearLayout>
+</LinearLayout>
