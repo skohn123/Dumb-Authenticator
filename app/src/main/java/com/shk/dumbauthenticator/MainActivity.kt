@@ -152,14 +152,6 @@ class MainActivity : ComponentActivity() {
         listView.adapter = adapter
 
         updateEmptyState()
-
-        listView.setOnItemClickListener { _, _, position, _ ->
-            copyAccountCode(accounts[position])
-        }
-        listView.setOnItemLongClickListener { _, _, position, _ ->
-            copyAccountCode(accounts[position])
-            true
-        }
     }
 
     private fun copyAccountCode(account: StorageHelper.Account) {
@@ -433,6 +425,9 @@ class MainActivity : ComponentActivity() {
             val progressBar = view.findViewById<ProgressBar>(R.id.progressBarItem)
             progressBar.max = account.period
             progressBar.progress = secondsRemaining
+
+            view.setOnClickListener { copyAccountCode(account) }
+            view.setOnLongClickListener { copyAccountCode(account); true }
 
             return view
         }

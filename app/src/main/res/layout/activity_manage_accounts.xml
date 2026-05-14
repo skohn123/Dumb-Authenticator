@@ -13,27 +13,38 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TAP TO SELECT &amp; DELETE"
-        android:textSize="11sp"
+        android:text="TAP TO SELECT"
+        android:textSize="10sp"
         android:textColor="@color/text_secondary"
         android:fontFamily="monospace"
         android:letterSpacing="0.2"
         android:gravity="center"
-        android:padding="14dp"
+        android:padding="8dp"
         android:background="@color/bg_card" />
 
     <ListView
         android:id="@+id/listManageAccounts"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:focusable="true"
         android:focusableInTouchMode="true"
         android:nextFocusUp="@id/btnTopBack"
+        android:nextFocusDown="@id/btnDeleteSelected"
         android:divider="@color/divider"
         android:dividerHeight="1dp"
         android:padding="0dp"
         android:listSelector="@color/accent_green_dim">
         <requestFocus />
     </ListView>
+
+    <Button
+        android:id="@+id/btnDeleteSelected"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="DELETE SELECTED (0)"
+        android:nextFocusUp="@id/listManageAccounts"
+        style="@style/Widget.DA.Button.Primary" />
 
 </LinearLayout>
